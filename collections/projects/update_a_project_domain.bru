@@ -1,0 +1,23 @@
+meta {
+  name: update_a_project_domain
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{server}}/v9/projects/:idOrName/domains/:domain
+  body: json
+  auth: none
+}
+
+params:path {
+  idOrName: project_name
+  domain: www.example.com
+}
+
+body:json {
+  {
+    "gitBranch": null,
+    "redirect": null,
+  }
+}

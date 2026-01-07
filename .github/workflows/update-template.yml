@@ -27,8 +27,8 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Clean directory files/folders
-        run: bun run scripts/clean-old-files.ts
+      # - name: Clean directory files/folders
+      #   run: bun run scripts/clean-old-files.ts
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3

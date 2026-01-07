@@ -1,0 +1,25 @@
+meta {
+  name: find_a_project_by_id_or_name
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{server}}/v9/projects/:idOrName
+  body: json
+  auth: none
+}
+
+params:path {
+  idOrName: project_name
+}
+
+params:query {
+  teamId: team_1a2b3c4d5e6f7g8h9i0j1k2l
+  slug: my-team-url-slug
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  Accept: Application/json
+}

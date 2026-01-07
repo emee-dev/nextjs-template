@@ -1,0 +1,27 @@
+meta {
+  name: create_a_new_project
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{server}}/v11/projects
+  body: json
+  auth: none
+}
+
+params:query {
+  teamId: team_1a2b3c4d5e6f7g8h9i0j1k2l
+  slug: my-team-url-slug
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  Accept: Application/json
+}
+
+body:json {
+  {
+    "name": "fumastudio_docs"
+  }
+}

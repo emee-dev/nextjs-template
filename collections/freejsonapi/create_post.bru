@@ -1,0 +1,23 @@
+meta {
+  name: create_post
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{server2}}/posts
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "bruno",
+    "service": "docs"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

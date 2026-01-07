@@ -27,9 +27,9 @@
     "@shikijs/themes": "^3.14.0",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.90.12",
-    "@trythis/js-schema": "0.0.4",
-    "@trythis/nextjs": "0.0.7",
-    "@trythis/web-editor": "0.0.1",
+    "@trythis/js-schema": "workspace:*",
+    "@trythis/nextjs": "workspace:*",
+    "@trythis/web-editor": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "clsx": "2.1.1",
     "cmdk": "^1.1.1",
@@ -73,11 +73,12 @@
     "typescript": "^5.9.2"
   },
   "scripts": {
-    "build:deps": "pnpm -r run build:tenant-deps",
     "build": "next build",
     "dev": "next dev --turbo",
     "start": "next start",
     "knip": "knip",
-    "lint": "pnpm tsc --noEmit"
+    "lint": "pnpm tsc --noEmit",
+    "build-collection": "pnpm dlx @trythis/fuma-content build ./collections --bruno --dist ./source",
+    "template:build": "pnpm -r build:template-deps"
   }
 }
