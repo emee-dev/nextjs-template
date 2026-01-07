@@ -26,14 +26,14 @@ yarn-error.log*
 .env*.local
 .vercel
 next-env.d.ts
+
 # Local Netlify folder
 .netlify
-script.ts
-dump.json
 
 # useless files
+script.ts
+dump.json
 deploy.ts
-pnpm-lock.yaml
 
 # Config
 studio.config.json
