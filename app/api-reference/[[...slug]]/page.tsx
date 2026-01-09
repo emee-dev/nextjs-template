@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/sidebar";
 import { consts } from "@/lib/constants";
 import { useMDXComponents } from "@/mdx-components";
+import { SettingsProvider } from "@/providers/settings-provider";
 import {
 	compileSource,
 	DocCache,
@@ -15,7 +16,6 @@ import {
 	importTemplate,
 } from "@trythis/nextjs";
 import { createNavigation } from "@trythis/nextjs/lib";
-import { SettingsProvider } from "@trythis/nextjs/settings";
 import { notFound, redirect, RedirectType } from "next/navigation";
 import { join } from "path";
 import { AppSidebar } from "./app-sidebar";

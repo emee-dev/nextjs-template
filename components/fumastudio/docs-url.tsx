@@ -5,7 +5,7 @@ import { CheckCircleFilled } from "@/components/icons/check-circle-filled";
 import { Button } from "@/components/ui/button";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { Colors } from "@/lib/utils";
-import { useSettings } from "@trythis/nextjs/settings";
+import { useSettings } from "@/providers/settings-provider";
 import { Copy } from "lucide-react";
 import { useState } from "react";
 

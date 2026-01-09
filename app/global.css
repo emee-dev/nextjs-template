@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "@trythis/web-editor/css";
+/* @import "../node_modules/@trythis/web-editor/dist/styles/output.css"; */
 
 @plugin "@tailwindcss/typography";
 @plugin 'tailwind-scrollbar-hide';
@@ -15,15 +16,11 @@
   font-size: max(2.5rem, min(4vw, 4rem));
 }
 
- 
-
 @utility overflow-wrap-anywhere {
   overflow-wrap: anywhere;
   word-break: break-word;
   hyphens: auto;
 }
-
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

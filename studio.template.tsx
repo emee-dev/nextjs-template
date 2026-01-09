@@ -1,7 +1,7 @@
 import { AnthropicIcon } from "@/components/icons/anthropic";
 import { ChatGPTIcon } from "@/components/icons/chatgpt";
 import { MarkdownIcon } from "@/components/icons/markdown";
-import { type Settings } from "@trythis/nextjs/settings";
+import { type Settings } from "@/providers/settings-provider";
 import Link from "next/link";
 
 const config: Settings = {

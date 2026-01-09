@@ -81,8 +81,8 @@ importers:
         specifier: 0.0.4
         version: 0.0.4
       '@trythis/nextjs':
-        specifier: 0.0.8
-        version: 0.0.8(@types/react@19.1.9)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        specifier: 0.0.9
+        version: 0.0.9(@types/react@19.1.9)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@trythis/web-editor':
         specifier: 0.0.2
         version: 0.0.2(@opentelemetry/api@1.9.0)(@svta/cml-cta@1.0.1(@svta/cml-structured-field-values@1.0.1(@svta/cml-utils@1.0.1))(@svta/cml-utils@1.0.1))(@svta/cml-structured-field-values@1.0.1(@svta/cml-utils@1.0.1))(@svta/cml-utils@1.0.1)(@types/node@24.1.0)(@types/react-dom@19.1.7(@types/react@19.1.9))(@types/react@19.1.9)(immer@10.2.0)(scheduler@0.27.0)(tailwindcss@4.1.18)(typescript@5.9.3)(use-sync-external-store@1.6.0(react@19.2.3))
@@ -774,8 +774,8 @@ packages:
   '@lezer/lr@1.4.7':
     resolution: {integrity: sha512-wNIFWdSUfX9Jc6ePMzxSPVgTVB4EOfDIwLQLWASyiUdHKaMsiilj9bYiGkGQCKVodd0x6bgQCV207PILGFCF9Q==}
 
-  '@mantine/hooks@8.3.11':
-    resolution: {integrity: sha512-WJFKDnJJM2fAOCkrO8qRsi3wDdicSFqElruPj5TEYWDL93vl0pITOyN0oRF93bUtx190waqela3edfGH3r5/1g==}
+  '@mantine/hooks@8.3.12':
+    resolution: {integrity: sha512-lMMDzDewd3lUNtJCAHDj3g8On9X5aBl4q6EBwgOixKQSby9RG9ASEpK8oYHundHTm9tzo3MDeXWV/z32oSQWuw==}
     peerDependencies:
       react: ^18.x || ^19.x
 
@@ -2512,8 +2512,8 @@ packages:
   '@trythis/js-schema@0.0.4':
     resolution: {integrity: sha512-+i+zdGexJ/OcPTQidijn2OmqheBumRQMA9wKAKe29vKlbmqTnNBc67RweWNN4q+jPJ32b5UXlNChV+Kh/b2TzQ==}
 
-  '@trythis/nextjs@0.0.8':
-    resolution: {integrity: sha512-W2cU1O0GB6j7zr8q3ydwEZ8Xep2jrIljO525x7MinXFKgpH/yJPvdtSmWxqZo/llCNCcGGE71LAGL2sDj+Drjg==}
+  '@trythis/nextjs@0.0.9':
+    resolution: {integrity: sha512-KKvNHRQqErwqwLwomMwr8oO3ElKfHx/ceTUNsk8H54VO/hlwnAJUkOJQYHlqQeQatVviWVReLfsbpxhonPWEIQ==}
 
   '@trythis/web-editor@0.0.2':
     resolution: {integrity: sha512-hHfNF7jJ3Plv2Ml4Pe4h40Dc7uoHpL/uXOMMW/qfmKbqNKpYYj/fXYWGJ0sL2EpZ8VmazrXTcroYoPRGp+WqwQ==}
@@ -5074,7 +5074,7 @@ snapshots:
     dependencies:
       '@lezer/common': 1.5.0
 
-  '@mantine/hooks@8.3.11(react@19.2.3)':
+  '@mantine/hooks@8.3.12(react@19.2.3)':
     dependencies:
       react: 19.2.3
 
@@ -6971,7 +6971,7 @@ snapshots:
     dependencies:
       '@faker-js/faker': 10.2.0
 
-  '@trythis/nextjs@0.0.8(@types/react@19.1.9)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@trythis/nextjs@0.0.9(@types/react@19.1.9)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       change-case: 5.4.4
       flexsearch: 0.8.212
@@ -6997,7 +6997,7 @@ snapshots:
       '@codemirror/view': 6.39.9
       '@emoji-mart/data': 1.2.1
       '@faker-js/faker': 10.2.0
-      '@mantine/hooks': 8.3.11(react@19.2.3)
+      '@mantine/hooks': 8.3.12(react@19.2.3)
       '@platejs/ai': 49.2.15(platejs@49.2.21(@types/react@19.1.9)(immer@10.2.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(scheduler@0.27.0)(use-sync-external-store@1.6.0(react@19.2.3)))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
       '@platejs/autoformat': 49.0.0(platejs@49.2.21(@types/react@19.1.9)(immer@10.2.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(scheduler@0.27.0)(use-sync-external-store@1.6.0(react@19.2.3)))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@platejs/basic-nodes': 49.0.0(platejs@49.2.21(@types/react@19.1.9)(immer@10.2.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(scheduler@0.27.0)(use-sync-external-store@1.6.0(react@19.2.3)))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)

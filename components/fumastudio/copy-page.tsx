@@ -9,7 +9,10 @@ import {
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useClipboard } from "@/hooks/use-clipboard";
-import { useSettings, type CopyPageDropdown } from "@trythis/nextjs/settings";
+import {
+	useSettings,
+	type CopyPageDropdown,
+} from "@/providers/settings-provider";
 import { ChevronDown, Copy } from "lucide-react";
 import { MouseEvent, useState } from "react";
 

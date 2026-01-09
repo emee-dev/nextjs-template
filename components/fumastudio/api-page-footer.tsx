@@ -1,7 +1,7 @@
 "use client";
 
 import type { DocPagination } from "@/components/fumastudio/api-page";
-import { useSettings } from "@trythis/nextjs/settings";
+import { useSettings } from "@/providers/settings-provider";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
