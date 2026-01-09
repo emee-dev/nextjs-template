@@ -81,8 +81,8 @@ importers:
         specifier: 0.0.4
         version: 0.0.4
       '@trythis/nextjs':
-        specifier: 0.0.7
-        version: 0.0.7(@types/react@19.1.9)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        specifier: 0.0.8
+        version: 0.0.8(@types/react@19.1.9)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@trythis/web-editor':
         specifier: 0.0.2
         version: 0.0.2(@opentelemetry/api@1.9.0)(@svta/cml-cta@1.0.1(@svta/cml-structured-field-values@1.0.1(@svta/cml-utils@1.0.1))(@svta/cml-utils@1.0.1))(@svta/cml-structured-field-values@1.0.1(@svta/cml-utils@1.0.1))(@svta/cml-utils@1.0.1)(@types/node@24.1.0)(@types/react-dom@19.1.7(@types/react@19.1.9))(@types/react@19.1.9)(immer@10.2.0)(scheduler@0.27.0)(tailwindcss@4.1.18)(typescript@5.9.3)(use-sync-external-store@1.6.0(react@19.2.3))
@@ -2512,8 +2512,8 @@ packages:
   '@trythis/js-schema@0.0.4':
     resolution: {integrity: sha512-+i+zdGexJ/OcPTQidijn2OmqheBumRQMA9wKAKe29vKlbmqTnNBc67RweWNN4q+jPJ32b5UXlNChV+Kh/b2TzQ==}
 
-  '@trythis/nextjs@0.0.7':
-    resolution: {integrity: sha512-9XUb6fyDkggTd+NVZVWNJHvk8VmRKR+IQPZzzlPf56vipSqVWjy9rpOsh1+Do1EqVGDRGZ0AKppsiuq9ZIqzeg==}
+  '@trythis/nextjs@0.0.8':
+    resolution: {integrity: sha512-W2cU1O0GB6j7zr8q3ydwEZ8Xep2jrIljO525x7MinXFKgpH/yJPvdtSmWxqZo/llCNCcGGE71LAGL2sDj+Drjg==}
 
   '@trythis/web-editor@0.0.2':
     resolution: {integrity: sha512-hHfNF7jJ3Plv2Ml4Pe4h40Dc7uoHpL/uXOMMW/qfmKbqNKpYYj/fXYWGJ0sL2EpZ8VmazrXTcroYoPRGp+WqwQ==}
@@ -6971,7 +6971,7 @@ snapshots:
     dependencies:
       '@faker-js/faker': 10.2.0
 
-  '@trythis/nextjs@0.0.7(@types/react@19.1.9)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@trythis/nextjs@0.0.8(@types/react@19.1.9)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       change-case: 5.4.4
       flexsearch: 0.8.212

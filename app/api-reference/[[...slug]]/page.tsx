@@ -6,6 +6,7 @@ import {
 	SidebarProvider,
 	SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { consts } from "@/lib/constants";
 import { useMDXComponents } from "@/mdx-components";
 import {
 	compileSource,
@@ -32,7 +33,7 @@ type PageProps = {
 };
 
 const cwd = process.cwd();
-const SOURCE_DIR = join(cwd, "source");
+const SOURCE_DIR = join(cwd, consts.docsDir);
 const segment = "/api-reference/[[...slug]]";
 
 export default async function Page(props: PageProps) {
@@ -109,6 +110,6 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: PageProps) {
 	const docLoader = new DocLoader(SOURCE_DIR, DocCache.getInstance());
-	const {  data } = await docLoader.getMetaData(props, segment);
+	const { data } = await docLoader.getMetaData(props, segment);
 	return data;
 }

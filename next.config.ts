@@ -1,8 +1,12 @@
 import { getConfig } from "@/lib/search";
-import manifest from "@/source/manifest.json";
 import { createSearch, indexCollectionsSync } from "@trythis/nextjs/search";
+import path from "node:path";
+import manifest from "./.docs/manifest.json";
+import { consts } from "./lib/constants";
 
 const cwd = process.cwd();
+const docsDir = path.join(cwd, consts.docsDir);
+const searchDir = path.join(cwd, consts.searchDir);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -24,12 +28,16 @@ const nextConfig = {
 
 const skipIf = () => process.env.NODE_ENV !== "production";
 
-const collections = indexCollectionsSync({ cwd, manifest, skipIf });
+const collections = indexCollectionsSync({
+	docsDir,
+	manifest,
+	skipIf,
+});
 
 type Collection = (typeof collections)[number];
 
 const withSearch = createSearch({
-	outDir: "./search",
+	searchDir,
 	data: collections,
 	document: getConfig<Collection>(),
 });

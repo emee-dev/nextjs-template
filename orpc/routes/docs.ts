@@ -1,3 +1,4 @@
+import { consts } from "@/lib/constants";
 import { getConfig } from "@/lib/search";
 import { Filetree } from "@/lib/utils";
 import { os } from "@orpc/server";
@@ -11,9 +12,9 @@ import path, { join } from "path";
 import * as z from "zod";
 
 const cwd = process.cwd();
-const indexDir = path.join(cwd, "search");
+const searchDir = path.join(cwd, consts.searchDir);
 
-const ts = new TextSearch(indexDir, {
+const ts = new TextSearch(searchDir, {
 	document: getConfig(),
 });
 
@@ -44,9 +45,9 @@ export const getTopLevelFiles = os
 	.handler(async ({ input }) => {
 		const filePath = join(
 			cwd,
-			"source",
+			consts.docsDir,
 			input.branchSlug,
-			"sidebar.json",
+			consts.sidebarId,
 		);
 
 		const file = await readFile(filePath, "utf8");

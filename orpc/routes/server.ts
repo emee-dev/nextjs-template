@@ -1,5 +1,6 @@
+import authServerFile from "@/.docs/auth_server.json";
+import { consts } from "@/lib/constants";
 import { AuthServerExports, RequestServerAuth } from "@/lib/utils";
-import authServerFile from "@/source/auth_server.json";
 import { os } from "@orpc/server";
 import { Mdx } from "@trythis/nextjs/search";
 import { readFile } from "fs/promises";
@@ -12,7 +13,7 @@ export const getCollection = os
 	.input(z.object({ branchSlug: z.string() }))
 	.handler(async ({ input }) => {
 		const collections = await readFile(
-			path.join(cwd, "source", input.branchSlug, "collection.json"),
+			path.join(cwd, consts.docsDir, input.branchSlug, consts.collectionId),
 			"utf8",
 		);
 

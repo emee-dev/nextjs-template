@@ -28,7 +28,7 @@
       "@tailwindcss/typography": "^0.5.16",
       "@tanstack/react-query": "^5.90.12",
       "@trythis/js-schema": "0.0.4",
-      "@trythis/nextjs": "0.0.7",
+      "@trythis/nextjs": "0.0.8",
       "@trythis/web-editor": "0.0.2",
       "class-variance-authority": "^0.7.1",
       "clsx": "2.1.1",
@@ -78,7 +78,7 @@
       "start": "next start",
       "knip": "knip",
       "lint": "pnpm tsc --noEmit",
-      "build-collection": "pnpm dlx @trythis/fuma-content build ./collections --bruno --dist ./source",
+      "build-collection": "pnpm dlx @trythis/fuma-content build ./collections --bruno --dist ./.docs",
       "template:build": "pnpm -r build:template-deps"
    }
 }

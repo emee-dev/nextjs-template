@@ -38,4 +38,5 @@ deploy.ts
 # Config
 studio.config.json
 source
-search
+.docs
+.docs-search
