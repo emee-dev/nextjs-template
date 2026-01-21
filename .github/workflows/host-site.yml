@@ -33,13 +33,30 @@ jobs:
         env:
           branch: main # Branch on fuma-studio to publish the docs to.
           collection_root: "./collections"
-          dist: "./docs"
+          dist: "./.docs"
         run: |
           fuma-content build "$collection_root" \
             --branchId "$branch" \
             --bru-env Local \
             --dist "$dist" \
             --bruno
+
+      - name: Build collection
+        env:
+          branch: main # Branch on fuma-studio to publish the docs to.
+          collection_root: "./collections"
+          dist: "./.docs"
+        run: |
+          fuma-content build "$collection_root" \
+            --branchId "$branch" \
+            --bru-env Local \
+            --dist "$dist" \
+            --bruno
+
+      # This is temporarily build the project and generate the ./.docs-search folder
+      - name: Build Search Index
+        run: |
+          pnpm install && pnpm build
 
       - name: Upload collection
         env:

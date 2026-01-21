@@ -36,7 +36,6 @@ dump.json
 deploy.ts
 
 # Config
-studio.config.json
 source
 .docs
 .docs-search
