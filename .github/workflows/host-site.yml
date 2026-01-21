@@ -43,11 +43,12 @@ jobs:
 
       - name: Upload collection
         env:
-          project_root: "./"
-          vercel_team_id: ${{ secrets.VERCEL_TEAM_ID }}
-          vercel_acct_token: ${{ secrets.VERCEL_ACCT_TOKEN }}
+          PROJECT_ROOT: "./"
+          VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
+          VERCEL_ACCT_TOKEN: ${{ secrets.VERCEL_ACCT_TOKEN }}
         run: |
-          fuma-content hosting "$project_root" \
-            --vercel-team-id "$vercel_team_id" \
-            --vercel-acct-token "$vercel_acct_token" \
+          fuma-content hosting "$PROJECT_ROOT" \
+            --vercel-team-id "$VERCEL_TEAM_ID" \
+            --vercel-acct-token "$VERCEL_ACCT_TOKEN" \
             --vercel
+          
