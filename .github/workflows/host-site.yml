@@ -1,0 +1,53 @@
+name: Host Static Site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: 
+
+jobs:
+  host-static-site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # ensures repo checkout uses the token
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: latest
+
+      - name: Install fuma-content cli
+        run: pnpm install -g @trythis/fuma-content
+
+      - name: Build collection
+        env:
+          branch: main # Branch on fuma-studio to publish the docs to.
+          collection_root: "./collections"
+          dist: "./docs"
+        run: |
+          fuma-content build "$collection_root" \
+            --branchId "$branch" \
+            --bru-env Local \
+            --dist "$dist" \
+            --bruno
+
+      - name: Upload collection
+        env:
+          project_root: "./"
+          vercel_team_id: ${{ secrets.VERCEL_TEAM_ID }}
+          vercel_acct_token: ${{ secrets.VERCEL_ACCT_TOKEN }}
+        run: |
+          fuma-content hosting "$project_root" \
+            --vercel-team-id "$vercel_team_id" \
+            --vercel-acct-token "$vercel_acct_token" \
+            --vercel
